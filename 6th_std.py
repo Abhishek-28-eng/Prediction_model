@@ -20,7 +20,7 @@ from xgboost import XGBClassifier
 # In[539]:
 
 
-df=pd.read_csv("6th_student_interest_career.csv")
+df=pd.read_csv("Datasets/6th_studnet_ds.csv")
 df
 
 
@@ -62,8 +62,27 @@ career_map = {
     "Computer": ["Software Developer", "Artificial Intelligence (AI) / Machine Learning Engineer"]
 }
 
-# Mapping Recommended Careers and converting to comma-separated strings
-df2['Recommended Career'] = df2['Interest'].map(lambda x: ', '.join(career_map.get(x, [])))
+# Ensure all subject columns are numeric
+for column in df2.columns[1:]:
+    df2[column] = pd.to_numeric(df2[column], errors="coerce")
+
+# Determine interests
+def determine_interests(row):
+    highest_marks = max(row[1:])  # Skip the 'Student' column
+    return [subject for subject, marks in row[1:].items() if marks == highest_marks]
+
+# Determine recommended careers
+def determine_careers(interests):
+    return {career for subject in interests for career in career_map.get(subject, [])}
+
+# Apply functions to create new columns
+df2["Interest"] = df2.apply(determine_interests, axis=1)
+df2["Recommended Career"] = df2["Interest"].apply(determine_careers)
+
+# Convert lists and sets to strings for better readability
+df2["Interest"] = df2["Interest"].apply(lambda x: ", ".join(x))
+df2["Recommended Career"] = df2["Recommended Career"].apply(lambda x: ", ".join(x))
+
 df2
 
 

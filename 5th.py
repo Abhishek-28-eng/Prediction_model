@@ -20,7 +20,7 @@ from xgboost import XGBClassifier
 # In[539]:
 
 
-df=pd.read_csv("Datasets/DG2.csv")
+df=pd.read_csv("Datasets/5th.csv")
 df
 
 
