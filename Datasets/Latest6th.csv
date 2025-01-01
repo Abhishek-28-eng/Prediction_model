@@ -1,8 +1,8 @@
 Unique_ID,Marathi,Urdu,Hindi,English,History,Science,Geography,Drawing,Sports,Environmental Studies,Math,Computer,Interest
-stud_1,74,46,74,35,74,64,74,53,28,20,74,67,"Marathi, Hindi, History, Geography, Math, Computer"
-stud_2,54,90,69,54,72,90,22,79,90,79,65,25,"Urdu, Science, Drawing, Sports, Environmental Studies"
-stud_3,59,68,22,82,60,82,74,71,55,79,82,82,"English, Science, Environmental Studies, Math, Computer"
-stud_4,31,61,40,25,26,93,93,93,38,93,24,60,"Urdu, Science, Geography, Drawing, Environmental Studies"
+stud_1,39,46,54,35,71,64,74,53,28,20,74,67,"History, Geography, Math"
+stud_2,54,56,69,54,72,27,22,79,47,79,65,25,"History, Drawing, Environmental Studies"
+stud_3,59,68,22,77,60,36,74,71,55,79,76,53,"English, Environmental Studies"
+stud_4,31,61,40,25,26,61,78,22,38,76,24,60,"Geography, Environmental Studies"
 stud_5,52,25,22,21,59,35,44,53,62,45,24,76,"Sports, Computer"
 stud_6,68,27,60,51,60,60,80,51,65,50,29,57,"Marathi, Geography"
 stud_7,35,33,31,31,77,42,45,63,33,37,57,54,"History, Drawing"
